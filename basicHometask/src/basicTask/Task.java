@@ -1,3 +1,5 @@
+package basicTask;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -72,8 +74,12 @@ public class Task {
         int[] array = {1,2,3,4,5};
         String arrayStr;
         char[] newArray;
+        String strWithoutSpace;
+        String[] strArray;
+
         arrayStr = Arrays.toString(array);
         System.out.println("Array to String = " + arrayStr);
+        /* знаю что комментарии не приветствуются, но это один из вариантов решения задачи, не хотел чистить
         String str1 = arrayStr.replace("[", "");
         String str2 = str1.replace("]", "");
         String str3 = str2.replace(",", "");
@@ -81,7 +87,14 @@ public class Task {
         newArray = str4.toCharArray();
         for (int i = 0; i < newArray.length; i++) {
             System.out.println("array[" + i + "] = " + newArray[i]);
+        } //конец 1 решения
+        */
+        strWithoutSpace = arrayStr.replace(" ", "");
+        strArray = strWithoutSpace.split("[\\s\\D]");
+        for (int i = 0; i < strArray.length; i++) {
+            System.out.println("[" + i + "] = " + strArray[i]);
         }
+
     }
 
     protected void addHelloToArray () {
