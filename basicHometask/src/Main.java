@@ -6,21 +6,21 @@ import generic.WorkWithGeneric;
 import oopClass.Dog;
 import oopClass.DogChild;
 import oopClass.Test;
+import thread.MySecondThread;
+import thread.MyFirstThread;
 
 public class Main{
 
+    static Task task = new Task();
+    static Test test = new Test();
+    static Dog dog = new Dog();
+    static DogChild dogChild = new DogChild();
+    static Collection collection = new Collection();
+    static Exception exception = new Exception();
+    static WorkWithGeneric workWithGeneric = new WorkWithGeneric();
+    static Constructor constructor = new Constructor(Constructor.class.getSimpleName(),"Sergey");
+
     public static void main(String[] args) {
-
-        Task task = new Task();
-        Test test = new Test();
-        Dog dog = new Dog();
-        DogChild dogChild = new DogChild();
-        Collection collection = new Collection();
-        Exception exception = new Exception();
-        WorkWithGeneric workWithGeneric = new WorkWithGeneric();
-        Constructor constructor = new Constructor(Constructor.class.getSimpleName(),"Sergey");
-
-
         /*
         //fist part task
 
@@ -41,11 +41,11 @@ public class Main{
         //end fist part
         */
 
-         /*
+        /*
         //collection
 
-        //collection.collHash();
-        //collection.collSet();
+        collection.collHash();
+        collection.collSet();
 
         //end collection
         */
@@ -66,7 +66,18 @@ public class Main{
         /* constructor
         System.out.println("Class name: " + constructor.getClassName());
         System.out.println("Class author: " + constructor.getAuhtorClass());
-        */
+     */
+
+        for (int i = 0; i < 2; i++) {
+            MyFirstThread myFirstThread = new MyFirstThread();
+            myFirstThread.start();
+        }
+
+        for (int i = 0; i < 10; i++) {
+            MySecondThread mySecondThread = new MySecondThread("Thread");
+            mySecondThread.start();
+            System.out.println("Started Thread:" + i);
+        }
 
     }
 }
