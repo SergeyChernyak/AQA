@@ -11,6 +11,4 @@ public class Second extends First{
     protected void secondMethod() {
         super.secondMethod();
     }
-
-
 }

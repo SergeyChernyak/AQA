@@ -6,13 +6,12 @@ import generic.WorkWithGeneric;
 import oopClass.Dog;
 import oopClass.DogChild;
 import oopClass.Test;
-import thread.MySecondThread;
-import thread.MyFirstThread;
 
 public class Main{
 
     static Task task = new Task();
-    static Test test = new Test();
+    static Test testNameFirst = new Test("Name1");
+    static Test testNameSecond = new Test("Name2");
     static Dog dog = new Dog();
     static DogChild dogChild = new DogChild();
     static Collection collection = new Collection();
@@ -36,9 +35,16 @@ public class Main{
         task.cycleBefore();
         task.cycleAfter();
         task.printValueOfArray();
-        test.getClassName();
 
         //end fist part
+        */
+
+
+        /*
+        //Class and object
+
+        System.out.println("First Name of Class: " + testNameFirst.getName());
+        System.out.println("Second Name of Class: " + testNameSecond.getName());
         */
 
         /*
@@ -68,6 +74,7 @@ public class Main{
         System.out.println("Class author: " + constructor.getAuhtorClass());
      */
 
+        /*
         for (int i = 0; i < 2; i++) {
             MyFirstThread myFirstThread = new MyFirstThread();
             myFirstThread.start();
@@ -78,6 +85,7 @@ public class Main{
             mySecondThread.start();
             System.out.println("Started Thread:" + i);
         }
+*/
 
     }
 }
