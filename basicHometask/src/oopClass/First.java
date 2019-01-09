@@ -2,6 +2,8 @@ package oopClass;
 
 public class First {
 
+    private String privateStr = "I am a private string";
+
     public void firstMethod() {
         System.out.println("First");
     }
@@ -11,7 +13,7 @@ public class First {
     }
 
     private void thirdMethod () {
-        System.out.println("Third");
+        System.out.println("Third private method");
     }
 
     public static void pMethod () {

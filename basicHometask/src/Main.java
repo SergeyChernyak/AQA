@@ -3,23 +3,28 @@ import collection.Collection;
 import constructor.Constructor;
 import exception.Exception;
 import generic.WorkWithGeneric;
+import oopClass.AccessToPrivateFieldWithReflection;
 import oopClass.Dog;
 import oopClass.DogChild;
 import oopClass.Test;
 
 public class Main{
 
-    static Task task = new Task();
-    static Test testNameFirst = new Test("Name1");
-    static Test testNameSecond = new Test("Name2");
-    static Dog dog = new Dog();
-    static DogChild dogChild = new DogChild();
-    static Collection collection = new Collection();
-    static Exception exception = new Exception();
-    static WorkWithGeneric workWithGeneric = new WorkWithGeneric();
-    static Constructor constructor = new Constructor(Constructor.class.getSimpleName(),"Sergey");
+    static private Task task = new Task();
+    static private Test testNameFirst = new Test("Name1");
+    static private Test testNameSecond = new Test("Name2");
+    static private Dog dog = new Dog();
+    static private DogChild dogChild = new DogChild();
+    static private Collection collection = new Collection();
+    static private Exception exception = new Exception();
+    static private WorkWithGeneric workWithGeneric = new WorkWithGeneric();
+    static private Constructor constructor = new Constructor(Constructor.class.getSimpleName(),"Sergey");
+    static private AccessToPrivateFieldWithReflection accessToPrivateFieldWithReflection = new AccessToPrivateFieldWithReflection();
 
     public static void main(String[] args) {
+
+        accessToPrivateFieldWithReflection.takeAllowPrivateField();
+        accessToPrivateFieldWithReflection.takeAllowPrivateMethod();
         /*
         //fist part task
 
@@ -38,7 +43,6 @@ public class Main{
 
         //end fist part
         */
-
 
         /*
         //Class and object
@@ -71,7 +75,7 @@ public class Main{
 
         /* constructor
         System.out.println("Class name: " + constructor.getClassName());
-        System.out.println("Class author: " + constructor.getAuhtorClass());
+        System.out.println("Class author: " + constructor.getAuthorClass());
      */
 
         /*
@@ -85,7 +89,9 @@ public class Main{
             mySecondThread.start();
             System.out.println("Started Thread:" + i);
         }
-*/
+        */
+
+
 
     }
 }

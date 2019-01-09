@@ -1,9 +1,12 @@
 package constructor;
 
+import collection.Collection;
+import javafx.print.Collation;
+
 public class Constructor {
 
-    String className;
-    String auhtorClass;
+    private String className;
+    private String authorClass;
 
     /*
     public Constructor(String className) {
@@ -12,22 +15,22 @@ public class Constructor {
 
     public Constructor(String className, String authorClass) {
         this.className = className;
-        this.auhtorClass = authorClass;
+        this.authorClass = authorClass;
     }
 
     public String getClassName() {
         return className;
     }
 
-    public String getAuhtorClass() {
-        return auhtorClass;
+    public String getAuthorClass() {
+        return authorClass;
     }
 
     public void setClassName(String className) {
         this.className = className;
     }
 
-    public void setAuhtorClass(String auhtorClass) {
-        this.auhtorClass = auhtorClass;
+    public void setAuthorClass(String authorClass) {
+        this.authorClass = authorClass;
     }
 }

@@ -3,18 +3,17 @@ package basicTask;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class Task {
 
     private Scanner scanner = new Scanner(System.in);
     private Random random = new Random();
 
-    protected void hello () {
+    public void hello () {
         System.out.println("Hello World");
     }
 
-    protected double averageMas () {
+    public double averageMas () {
         System.out.print("Enter length array = ");
         int n = scanner.nextInt();
         int[] array = new int[n];
@@ -29,7 +28,7 @@ public class Task {
         return averageValue;
     }
 
-    protected int factorialValue () {
+    public int factorialValue () {
         System.out.print("Enter value for calculate Factotial = ");
         int value = scanner.nextInt();
         int res = 1;
@@ -39,7 +38,7 @@ public class Task {
         return res;
     }
 
-    protected void printPrice () {
+    public void printPrice () {
         System.out.print("Enter id product = ");
         int id = scanner.nextInt();
         switch (id) {
@@ -61,7 +60,7 @@ public class Task {
         }
     }
 
-    protected void checkValue () {
+    public void checkValue () {
         System.out.print("Enter value = ");
         int n = scanner.nextInt();
         if (n % 2 == 0) {
@@ -70,7 +69,7 @@ public class Task {
             System.out.println("The number " + n + " is not event!");
     }
 
-    protected void arrayToStrAndStrToArray() {
+    public void arrayToStrAndStrToArray() {
         int[] array = {1,2,3,4,5};
         String arrayStr;
         char[] newArray;
@@ -97,7 +96,7 @@ public class Task {
 
     }
 
-    protected void addHelloToArray () {
+    public void addHelloToArray () {
         String[] array = {"1", "2", "3"};
         for (int i = 0; i < array.length; i++) {
             array[i] = array[i] + "hello";
@@ -105,20 +104,17 @@ public class Task {
         System.out.println("Array with hello = " + Arrays.toString(array));
     }
 
-    protected void arrayToBool () {
+    public void arrayToBool() {
         int[] array = {1,0,3,4,0};
         System.out.println("Input int array = " + Arrays.toString(array));
         boolean[] arrayBool = new boolean[array.length];
         for (int i = 0; i < array.length; i++) {
-            if (array[i] != 0) {
-                    arrayBool[i] = true;
-                } else
-                    arrayBool[i] = false;
+            arrayBool[i] = array[i] != 0;
             }
         System.out.println("Int array to Boolean array = " + Arrays.toString(arrayBool));
     }
 
-    protected void whereToGo () {
+    public void whereToGo () {
         System.out.print("Enter now time = ");
         double time = scanner.nextDouble();
         System.out.print("Enter money = ");
@@ -138,7 +134,7 @@ public class Task {
             System.out.println("Wrong time");
     }
 
-    protected void cycleBefore() {
+    public void cycleBefore() {
         System.out.print("Enter value = ");
         int n = scanner.nextInt();
         while (n > 10) {
@@ -147,7 +143,7 @@ public class Task {
         }
     }
 
-    protected void cycleAfter () {
+    public void cycleAfter () {
         System.out.print("Enter value = ");
         int n = scanner.nextInt();
 
@@ -157,7 +153,7 @@ public class Task {
         } while (n > 10);
     }
 
-    protected void printValueOfArray () {
+    public void printValueOfArray () {
         int[] array = new int[10];
         for (int i = 0; i<array.length; i++) {
             array[i] = random.nextInt(20);
